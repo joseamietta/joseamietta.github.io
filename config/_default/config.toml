@@ -20,4 +20,4 @@ googleAnalytics = ""
   noreferrerLinks = true
 
 [Permalinks]
- posts = "/:year/:filename/"
+ posts = "/:filename/"
