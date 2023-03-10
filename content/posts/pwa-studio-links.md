@@ -41,7 +41,7 @@ Este link contiene información sobre el proyecto, Roadmap, instalación, versio
 En este link van a encontrar algunos paquetes de ejemplo que podemos utilizar para crear los nuestros.
 Por ejemplo pago Chekmo, paquete de idiomas, modificar configuración de seguridad de headers en Upward, entre otros,
 
-(Extensions)[https://github.com/magento/pwa-studio/tree/develop/packages/extensions]
+[Extensions](https://github.com/magento/pwa-studio/tree/develop/packages/extensions)
 
 ## Otros
 
