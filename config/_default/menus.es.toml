@@ -1,0 +1,14 @@
+[[main]]
+    name = "Notas"
+    url = "/posts/"
+    weight = 1
+
+#[[main]]
+#    name = "Categorías"
+#    url = "/categories/"
+#    weight = 3
+
+[[main]]
+    name = "Yo"
+    url = "/me/"
+    weight = 3

@@ -1,0 +1,23 @@
+baseURL = 'https://joseamietta.github.io/'
+title = 'José M. Amietta'
+theme = 'KeepIt'
+languageCode = 'es'
+defaultContentLanguage = "es"
+
+paginate = 12
+enableEmoji = true
+enableRobotsTXT = true
+googleAnalytics = ""
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[blackfriday]
+  hrefTargetBlank = true
+  nofollowLinks = true
+  noreferrerLinks = true
+
+[Permalinks]
+ posts = "/:year/:filename/"

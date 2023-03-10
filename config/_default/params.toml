@@ -1,0 +1,33 @@
+since = 2023
+author = "José M. Amietta"
+subtitle = "Full Stack Magento Developer"
+cdn_url = ""           # Base CDN URL
+home_mode = "" # post or other
+dateFormatToUse = "02/01/2006" # set date format, default "2 January 2006"
+
+google_verification = ""
+bing_verification = ""
+yandex_verification = ""
+pinterest_verification = ""
+baidu_verification = ""
+
+#avatar = "/images/me/avatar.jpeg" #comment it to use gravatar
+socialShare = true
+
+description = "" # site description
+keywords = "" # site keywords
+
+license= ''
+
+[gravatar]
+    email = "joseamietta@gmail.com"   #uncomment and insert your email address to use gravatar
+
+
+[social]
+    GitHub = "https://github.com/joseamietta"
+    Linkedin = "https://www.linkedin.com/in/jose-amietta/"
+    Twitter = "https://mobile.twitter.com/joseamietta"
+
+[share]
+    Twitter = true
+    Linkedin = true
