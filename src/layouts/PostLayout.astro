@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+
+const { title, image, pubDate, description } = Astro.props;
+const date = new Intl.DateTimeFormat('es-ES').format(pubDate);
+---
+
+<Layout title={title}>
+  <Section>
+    <p>{date}</p>
+    <h1>{title}</h1>
+    {
+      description && (
+        <p>
+          <em>{description}</em>
+        </p>
+      )
+    }
+
+    {image && <img src={image} alt={title} class="w-full my-4" />}
+
+    <slot />
+  </Section>
+</Layout>

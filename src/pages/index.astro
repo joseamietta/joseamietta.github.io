@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import Post from "@/components/Post.astro";
+
+// const allPosts = await Astro.glob("@/pages/posts/*.md");
+const allPosts = await getCollection("posts");
+---
+
+<Layout title="José M. Amietta">
+  <section class="flex flex-col gap-y-4">
+    {allPosts.map((post) => <Post {...post} />)}
+  </section>
+</Layout>
+
+<style>
+  section {
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+</style>

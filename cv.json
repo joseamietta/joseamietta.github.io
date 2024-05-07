@@ -1,0 +1,193 @@
+{
+  "basics": {
+    "name": "José María Amietta",
+    "label": "Full Stack Magento Developer con más de 13 años de experiencia",
+    "image": "https://www.gravatar.com/avatar/e18146309ee10f4e74e00fa545ca5cc6?s=240&d=mp",
+    "phone": "",
+    "url": "https://joseamietta.github.io",
+    "summary": "Me defino como una persona autodidacta que le encanta estar en un estado de aprendizaje constante. Mis 13 años de experiencia en la profesión me convierten en una persona con una gran capacidad de adaptación y resolución. La curiosidad, compromiso, predisposición y organización me definen como profesional.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Córdoba",
+      "countryCode": "AR",
+      "region": "Argentina"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jose-amietta",
+        "url": "https://www.linkedin.com/in/jose-amietta/"
+      },
+      {
+        "network": "X",
+        "username": "joseamietta",
+        "url": "https://mobile.twitter.com/joseamietta"
+      },
+      {
+        "network": "GitHub",
+        "username": "joseamietta",
+        "url": "https://github.com/joseamietta"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Onetree",
+      "position": "Full Stack Magento Developer",
+      "url": "",
+      "startDate": "2022-01-17",
+      "endDate": null,
+      "summary": "Desarrollo y análisis funcional de E-commerce con PWA Studio, Adobe Commerce y Hyva checkout react.",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "25Watts",
+      "position": "CTO",
+      "startDate": "2016-03-01",
+      "endDate": "2022-01-15",
+      "summary": "Líder de área de tecnología, confección de presupuestos, análisis de requerimientos, desarrollo de proyectos, liderazgo de equipo de desarrollo, análisis de performance y optimización de aplicaciones.",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Mundos E",
+      "position": "Director diplomatura FullStack",
+      "url": "",
+      "startDate": "2022-02-01",
+      "endDate": "2022-11-01",
+      "summary": "Creación de programa y dicatdo de clases en la diplomatura de FullStack en Mundos E utilizando PHP, MySQL y React.",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "IES Siglo 21",
+      "url": "",
+      "area": "Técnico superior en Diseño de Multimedios",
+      "studyType": "Bachelor",
+      "startDate": "2006-01-01",
+      "endDate": "2008-01-01",
+      "score": "8.7",
+      "courses": ["Medalla dorada al mejor promedio de la carrera"]
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "Scrum Master",
+      "date": "2017-01-01",
+      "issuer": "Kinetic",
+      "url": "https://media.licdn.com/dms/image/sync/C5627AQGEcShzRWwU6A/articleshare-shrink_160/0/1714250570588?e=1714856400&v=beta&t=11_fy0_IArEVY5SR_4JfxQPojpyk9x-yARrUjAf3Ijo"
+    },
+    {
+      "name": "Secure Coding",
+      "date": "2021-07-01",
+      "issuer": "MUG Grupo de Usuarios Microsoft",
+      "url": "https://drive.google.com/file/d/1Tvzkiy3YykZxBwFe3exqCBBG9v7D1k9T/view"
+    },
+    {
+      "name": "Docker y Orquestadores de Containers",
+      "date": "2021-02-01",
+      "issuer": "MUG Grupo de Usuarios Microsoft",
+      "url": "https://drive.google.com/file/d/1M8UmpaEwMUFVxtqR3PDwsjqOVVj0hOIv/view"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Magento / Adobe Commerce",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "FullStack"]
+    },
+    {
+      "name": "PWA Studio",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI",
+        "Magento"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Medium level"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": []
+}
