@@ -7,7 +7,7 @@ const date = new Intl.DateTimeFormat('es-ES').format(pubDate);
 ---
 
 <Layout title={title}>
-  <Section>
+  <Section class={'post-content'}>
     <p>{date}</p>
     <h1>{title}</h1>
     {
@@ -23,3 +23,9 @@ const date = new Intl.DateTimeFormat('es-ES').format(pubDate);
     <slot />
   </Section>
 </Layout>
+
+<style is:global>
+  .post-content ul {
+    @apply list-disc list-inside;
+  }
+</style>

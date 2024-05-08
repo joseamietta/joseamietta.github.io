@@ -1,34 +1,36 @@
 ---
-const { slug, data } = Astro.props;
+const { slug, data, class: className } = Astro.props;
 const { image, title, description, tags } = data;
+
+const postUrl = `/posts/${slug}`;
 ---
 
 <article
-  class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+  class={`flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 ${className}`}
 >
   {
     image && (
       <div class="w-full md:w-1/2">
-        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+        <a href={postUrl}  class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
           <img
             alt={title}
             class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
             loading="lazy"
             src={image}
           />
-        </div>
+        </a>
       </div>
     )
   }
 
   <div class="w-full content-center md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      <a href={`/posts/${slug}`} class="group-hover:text-blue-500">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 my-0">
+      <a href={postUrl} class="group-hover:text-blue-500">
         {title}
       </a>
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row flex-wrap mb-2 gap-2">
+      <ul class="flex flex-row flex-wrap mb-2 gap-1">
         {
           tags.map((tag) => (
             <li>
