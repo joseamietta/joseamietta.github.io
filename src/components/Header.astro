@@ -80,7 +80,7 @@ const navItems = [
 
   triggerEl?.addEventListener("click", () => {
     const targetId = triggerEl.getAttribute("data-collapse-toggle");
-    const targetEl = document.getElementById(targetId);
+    const targetEl = targetId ? document.getElementById(targetId) : null;
 
     targetEl?.classList.toggle("hidden");
   });
