@@ -17,7 +17,7 @@ const navItems = [
 <header class="sticky top-0 z-10 w-full mb-4">
   <nav>
     <div
-      class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 pr-14"
+      class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
       <a href="/"
         ><img
@@ -29,7 +29,7 @@ const navItems = [
       <button
         data-collapse-toggle="navbar-default"
         type="button"
-        class="inline-flex items-center ml-auto p-2 size-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center ml-auto mr-10 p-2 size-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-default"
         aria-expanded="false"
       >
@@ -51,7 +51,7 @@ const navItems = [
       </button>
       <div class="hidden w-full ml-auto md:block md:w-auto" id="navbar-default">
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 md:pr-12 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
         >
           {
             navItems.map((link) => (
