@@ -55,7 +55,7 @@ Un ejemplo es asociar un componente a un método de pago:
 **Referencia de paquetes que pueden ser interceptados en PWA Studio**
 
 - [Buildpack](https://developer.adobe.com/commerce/pwa-studio/api/buildpack/targets/)
-- [Peregrine](https://developer.adobe.com/api/peregrine/extension-points/targets/)
+- [Peregrine](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/)
 - [Venia UI](https://developer.adobe.com/commerce/pwa-studio/api/venia/targets/)
 
 *Interceptar Peregrine lo veremos luego ya que necesita su propia nota!*
