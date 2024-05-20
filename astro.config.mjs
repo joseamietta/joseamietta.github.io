@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
+import partytown from "@astrojs/partytown";
 import { externalLink } from "./src/externalLink";
 
 // https://astro.build/config
@@ -9,6 +10,11 @@ export default defineConfig({
   integrations: [
     tailwind({
       applyBaseStyles: true,
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
     }),
   ],
   markdown: {
