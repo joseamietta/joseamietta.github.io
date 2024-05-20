@@ -22,34 +22,32 @@ Es una variante del patrón javascript llamado **Tapable hook** (comparte alguna
 Un ejemplo es asociar un componente a un método de pago:
 
 ```javascript
-
-  module.exports = targets => {
-    targets
-      // intercepta a @magento/pwa-buildpack 
-      // para acceder a specialFeatures    
-      .of('@magento/pwa-buildpack')
-      .specialFeatures.tap(flags => {
-        flags[targets.name] = {
-            esModules: true,
-            cssModules: true,
-            graphqlQueries: true,
-            i18n: true
-        };
-    });
-    
-    targets
-      // intercepta a @magento/venia-ui 
-      // para acceder a checkoutPagePaymentTypes
-      .of('@magento/venia-ui')
-      .checkoutPagePaymentTypes.tap(payments =>
-        payments.add({
-            paymentCode: 'paymentCode',
-            importPath:
-                targets.name + '/src/components/payment.js'
-        })
-    );
-  }
-
+module.exports = targets => {
+  targets
+    // intercepta a @magento/pwa-buildpack 
+    // para acceder a specialFeatures    
+    .of('@magento/pwa-buildpack')
+    .specialFeatures.tap(flags => {
+      flags[targets.name] = {
+          esModules: true,
+          cssModules: true,
+          graphqlQueries: true,
+          i18n: true
+      };
+  });
+  
+  targets
+    // intercepta a @magento/venia-ui 
+    // para acceder a checkoutPagePaymentTypes
+    .of('@magento/venia-ui')
+    .checkoutPagePaymentTypes.tap(payments =>
+      payments.add({
+          paymentCode: 'paymentCode',
+          importPath:
+              targets.name + '/src/components/payment.js'
+      })
+  );
+}
 ```
 
 **Referencia de paquetes que pueden ser interceptados en PWA Studio**
@@ -70,29 +68,27 @@ En este apartado hay varias formas de acceder al código fuente:
 ### Acceder al código fuente mediante esModule
 
  ```javascript
+const { Targetables } = require('@magento/pwa-buildpack');
 
-  const { Targetables } = require('@magento/pwa-buildpack');
+module.exports = targets => {
+  // se instancia Targetables pasando como parámetro targets
+  const targetables = Targetables.using(targets);
+
+  // instanciamos esModule para interceptar el archivo a modificar
+  const SearchTrigger = targetables.esModule(
+    '@magento/venia-ui/lib/components/Header/searchTrigger'
+  );
+
+  // importamos un ícono para utilizar luego
+  SearchTrigger.addImport("{ X as CloseIcon } from 'react-feather'");
   
-  module.exports = targets => {
-    // se instancia Targetables pasando como parámetro targets
-    const targetables = Targetables.using(targets);
-
-    // instanciamos esModule para interceptar el archivo a modificar
-    const SearchTrigger = targetables.esModule(
-      '@magento/venia-ui/lib/components/Header/searchTrigger'
-    );
-
-    // importamos un ícono para utilizar luego
-    SearchTrigger.addImport("{ X as CloseIcon } from 'react-feather'");
-    
-    // accedemos al código del archivo y antes de la siguiente aparición
-    // insertamos nuestro código
-    SearchTrigger.insertBeforeSource(
-        'SearchIcon} />\n',
-        'active ? CloseIcon : '
-    );
-  }
-
+  // accedemos al código del archivo y antes de la siguiente aparición
+  // insertamos nuestro código
+  SearchTrigger.insertBeforeSource(
+      'SearchIcon} />\n',
+      'active ? CloseIcon : '
+  );
+}
  ```
 
  **Métodos disponibles para utilizar con esModule**
@@ -111,25 +107,23 @@ En este apartado hay varias formas de acceder al código fuente:
  Extiende de esModule, por lo que también se pueden acceder a los métodos que nos brinda esModule
 
  ```javascript
+const { Targetables } = require('@magento/pwa-buildpack');
 
-  const { Targetables } = require('@magento/pwa-buildpack');
-  
-  module.exports = targets => {
-    // se instancia Targetables pasando como parámetro targets
-      const targetables = Targetables.using(targets);
+module.exports = targets => {
+  // se instancia Targetables pasando como parámetro targets
+    const targetables = Targetables.using(targets);
 
-      // instanciamos reactComponent para interceptar
-      // el componente a modificar
-      const MegaMenuComponent = targetables.reactComponent(
-          '@magento/venia-ui/lib/components/MegaMenu/megaMenu'
-      );
+    // instanciamos reactComponent para interceptar
+    // el componente a modificar
+    const MegaMenuComponent = targetables.reactComponent(
+        '@magento/venia-ui/lib/components/MegaMenu/megaMenu'
+    );
 
-      // editamos una de sus propiedades
-      MegaMenuComponent.setJSXProps('MegaMenuItem', {
-          categoryUrlSuffix: '{categoryUrlSuffix(category)}'
-      });
-  };
-  
+    // editamos una de sus propiedades
+    MegaMenuComponent.setJSXProps('MegaMenuItem', {
+        categoryUrlSuffix: '{categoryUrlSuffix(category)}'
+    });
+};
  ```
 
  **Métodos disponibles para utilizar con reactComponent**
